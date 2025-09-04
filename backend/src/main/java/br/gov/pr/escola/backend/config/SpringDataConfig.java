@@ -48,7 +48,7 @@ public class SpringDataConfig {
         HibernateJpaVendorAdapter vendorAdapter =
                 new HibernateJpaVendorAdapter();
         
-        vendorAdapter.setGenerateDdl(false);
+        vendorAdapter.setGenerateDdl(true);
         vendorAdapter.setShowSql(false);
         
         factory.setDataSource(dataSource());
