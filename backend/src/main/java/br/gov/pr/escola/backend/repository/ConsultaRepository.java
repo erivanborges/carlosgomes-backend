@@ -19,6 +19,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ConsultaRepository extends JpaRepository<ConsultaEntity, Long> {
     
+    @Query("SELECT c FROM ConsultaEntity c WHERE c.id = ?1")
+    ConsultaEntity getById(Long id);
+    
     @Query("SELECT c FROM ConsultaEntity c WHERE c.hora BETWEEN {t '14:00:00'} AND {t '18:00:00'}")
     List<ConsultaEntity> buscarTodasConsultasTarde(); 
     
@@ -27,5 +30,6 @@ public interface ConsultaRepository extends JpaRepository<ConsultaEntity, Long> 
     
     @Query("SELECT c FROM ConsultaEntity c WHERE c.hora BETWEEN :hrInicial AND :hrFinal")
     List<ConsultaEntity> buscarTodasConsultasTarde(@Param("hrInicial") Time horaInicial, @Param("hrFinal") Time horaFinal);
+    
     
 }
