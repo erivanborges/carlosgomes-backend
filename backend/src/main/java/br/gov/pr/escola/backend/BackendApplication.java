@@ -104,7 +104,7 @@ public class BackendApplication {
                 }
                 */
                 
-                log.info("");
+                /*log.info("");
                 log.info("");
                 log.info("============ Listagem as consultas somente do periodo da tarde com parametros posicionais ==============");
                 log.info("");
@@ -116,7 +116,7 @@ public class BackendApplication {
                     log.info("Medico: " + consulta.getMedico().getNome());
                     log.info("Paciente: " + consulta.getPaciente().getNome());
                     log.info("");
-                }
+                }*/
                 
             };
         }
